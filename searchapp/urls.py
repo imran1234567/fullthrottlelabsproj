@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'), #home page url configaration
     re_path(r'^search/', include(('projectapp.urls','search'), namespace='search')),
+    re_path(r'^api/search/', include(('projectapp.api.urls','search-api'), namespace='search-api')),
 ]

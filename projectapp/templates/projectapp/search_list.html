@@ -1,3 +1,6 @@
+{% extends 'home.html' %}
+
+{% block content %}
 <h1>List</h1>
 
 {% include "projectapp/search_form.html" %}
@@ -14,3 +17,4 @@
         <p>No objects yet</p>
     {% endif %}
 {% endfor %}
+{% endblock content %}
