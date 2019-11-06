@@ -9,12 +9,45 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>FullThrottle Labs Backend Test</title>
   </head>
   <body>
-      {% block content %}
-        <h1>Hello, world!</h1>
-      {% endblock content %}
+        <nav class="navbar navbar-light bg-light">
+                <a href="/" class="navbar-brand">FullThrottle Labs Backend Test</a>
+                {% include "projectapp/search_form.html" %}
+              </nav>
+
+      <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-md-4" style="background-color:dimgray; padding: 30px; height: 150px;">
+                <img src='{% static "img/logo-2.png" %}' alt="">
+            </div>
+            <div class="col-md-8">
+                <h1>Fuzzy Search</h1>
+                <p>This package provides REST APIs with support for fuzzy (approximate) full-text searching. This allows searching for results with unknown exact contents, as well as searches with spelling mistakes. The returned results are ranked and may be ordered by similarity.</p>
+                <h3>Requirements</h3>
+                <ul>
+                    <li>Django==2.2.7</li>
+                    <li>djangorestframework==3.10.3</li>
+                    <li>django-filter==2.2.0</li>
+                    <li>psycopg2==2.8.4</li>
+                    <li>whitenoise==4.1.4</li>
+                </ul>
+                <h3>Instruction</h3>
+                1.Create your Virtual enviorment and activate it
+                2.Clone the repository
+                3.Do (pip install requirements.txt)
+                4.Migrate into database(python manage.py migrate)
+                <br>
+                <a href="/search" class="btn btn-primary">Enter In Project</a>
+                {% block content %}
+                    
+                  {% endblock content %}
+            </div>
+        </div>
+            
+      </div>        
+      
     
 
     
