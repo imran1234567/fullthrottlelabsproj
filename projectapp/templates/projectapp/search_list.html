@@ -14,11 +14,9 @@ function getParameterByName(name, url) {
 }
 
 $(document).ready(function(){
-    console.log("working");
+    console.log("Made With Love Imran");
 
     var query = getParameterByName('q')
-    console.log(query)
-
     $.ajax({
         url: "/api/search/",
         data:{
@@ -28,9 +26,6 @@ $(document).ready(function(){
         success: function(data){
             //console.log(data)
             $.each(data, function(key, value){
-                console.log(key)
-                console.log(value.name)
-                console.log(value.custom_number)
                 var searchKey = key;
                 var searchName = value.name;
                 var searchNumber = value.custom_number;
