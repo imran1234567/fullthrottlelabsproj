@@ -1,5 +1,7 @@
 <h1>List</h1>
 
+{% include "projectapp/search_form.html" %}
+
 {% for obj in object_list %}
     {{obj.name}} <br>
     {{obj.custom_number}}

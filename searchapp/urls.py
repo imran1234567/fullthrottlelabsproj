@@ -21,5 +21,5 @@ from django.conf.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'), #home page url configaration
-    re_path(r'^search/', include('projectapp.urls')),
+    re_path(r'^search/', include(('projectapp.urls','search'), namespace='search')),
 ]
