@@ -23,6 +23,8 @@
                 <img src='{% static "img/logo-2.png" %}' alt="">
             </div>
             <div class="col-md-8">
+                
+                {% block content %}
                 <h1>Fuzzy Search</h1>
                 <p>This package provides REST APIs with support for fuzzy (approximate) full-text searching. This allows searching for results with unknown exact contents, as well as searches with spelling mistakes. The returned results are ranked and may be ordered by similarity.</p>
                 <h3>Requirements</h3>
@@ -41,8 +43,6 @@
                 <br>
                 <a href="/search" class="btn btn-primary">Enter In Project</a>
                 <a href="https://github.com/imran1234567/fullthrottlelabsproj">github Url</a>
-                {% block content %}
-                    
                   {% endblock content %}
             </div>
         </div>
