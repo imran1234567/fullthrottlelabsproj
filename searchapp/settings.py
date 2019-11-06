@@ -25,7 +25,7 @@ SECRET_KEY = 'tuq&jvw*ohfe)g(d46!qxn+6x0d)jcrq6)-m)0hm711m$90l-!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [fullthrottlelabsproj.herokuapp.com]
+ALLOWED_HOSTS = ['fullthrottlelabsproj.herokuapp.com']
 
 
 # Application definition
