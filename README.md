@@ -17,6 +17,8 @@
 3.Do (pip install requirements.txt) <br>
 4.Migrate into database(python manage.py migrate) <br>
 
+<p>Api Link :- https://fullthrottlelabsproj.herokuapp.com/api/search/</p>
+
 <p>Website Url: https://fullthrottlelabsproj.herokuapp.com/</p>
 
 <p>Imran Project for Full Throttle Labs</p>
