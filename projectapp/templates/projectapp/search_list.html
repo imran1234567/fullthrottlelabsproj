@@ -1,0 +1,12 @@
+<h1>List</h1>
+
+{% for obj in object_list %}
+    {{obj.name}} <br>
+    {{obj.custom_number}}
+{% empty %}
+    {% if  request.Get.q%}
+        <p>No objects found</p>
+    {% else %}
+        <p>No objects yet</p>
+    {% endif %}
+{% endfor %}
