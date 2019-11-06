@@ -12,10 +12,11 @@
     <li>whitenoise==4.1.4</li>
 </ul>
 <h3>Instruction</h3>
-1.Create your Virtual enviorment and activate it
-2.Clone the repository
-3.Do (pip install requirements.txt)
-4.Migrate into database(python manage.py migrate)
+1.Create your Virtual enviorment and activate it <br>
+2.Clone the repository <br>
+3.Do (pip install requirements.txt) <br>
+4.Migrate into database(python manage.py migrate) <br>
 
+<p>Website Url: https://fullthrottlelabsproj.herokuapp.com/</p>
 
 <p>Imran Project for Full Throttle Labs</p>
