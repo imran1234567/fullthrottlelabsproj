@@ -1,4 +1,4 @@
-<form method='GET' action='{% url "search:list"%}'>
+<form method='GET' action='{% url "search:list"%}' id='navbar-search-form'>
     <input type="text" name='q' placeholder='search' value='{{request.GET.q}}'>
     <input type='submit' value='Search' />
 </form>

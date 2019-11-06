@@ -1,15 +1,61 @@
 {% extends 'home.html' %}
 
+{% block script %}
+<script>
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+$(document).ready(function(){
+    console.log("working");
+
+    var query = getParameterByName('q')
+    console.log(query)
+
+    $.ajax({
+        url: "/api/search/",
+        data:{
+            "q": query
+        },
+        method:"GET",
+        success: function(data){
+            //console.log(data)
+            $.each(data, function(key, value){
+                console.log(key)
+                console.log(value.name)
+                console.log(value.custom_number)
+                var searchKey = key;
+                var searchName = value.name;
+                var searchNumber = value.custom_number;
+                $("#search-container").append(
+                    "<p>" + searchName + "</br>" + searchNumber + "</p>"
+                )
+            })
+        },
+        error: function(data){
+            console.log("error")
+            console.log(data)
+        }
+    })
+
+    
+});
+</script>
+{% endblock script %}
+
 {% block content %}
-<h1>List</h1>
-
 {% include "projectapp/search_form.html" %}
+<div id="search-container">
 
+</div>
 {% for obj in object_list %}
-<p>
-    {{obj.name}} <br>
-    {{obj.custom_number}}
-</p>
 {% empty %}
     {% if  request.Get.q%}
         <p>No objects found</p>
