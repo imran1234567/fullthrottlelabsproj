@@ -3,8 +3,10 @@
 {% include "projectapp/search_form.html" %}
 
 {% for obj in object_list %}
+<p>
     {{obj.name}} <br>
     {{obj.custom_number}}
+</p>
 {% empty %}
     {% if  request.Get.q%}
         <p>No objects found</p>
